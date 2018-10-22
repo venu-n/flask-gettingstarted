@@ -1,2 +1,2 @@
 # flask-gettingstarted #
-Templates / Blueprints to get started with flask application development
+Ready to start Python flask project layout for scalable application development.
