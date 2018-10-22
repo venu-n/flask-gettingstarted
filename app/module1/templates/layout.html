@@ -1,0 +1,38 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %}
+        <head>
+            <title> FLASK - STARTUP - TEMPLATE</title>
+            <meta charset="UTF-8">
+<!--        <link type=text/css rel=stylesheet href= "{{ url_for('static',filename='bootstrap-4.0.0/css/bootstrap.min.css') }}" />
+            <script type=text/javascript src= "{{ url_for('static',filename='bootstrap-4.0.0/js/bootstrap.min.js') }}"></script>
+    -->       
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        </head>
+    {% endblock head %}
+    <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Flask-startup-template</a>
+
+<ul class="nav">
+<li class="nav-item">
+    <a class="nav-link active" href="#"> Register</a>
+</li>
+</ul>
+</nav>
+
+    {% for message in get_flashed_messages() %}
+        <div class="container alert alert-info">
+            <button type="button" class="close" data-dismiss="alert"></button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% block content %} 
+
+    {% endblock content %}
+</body>
+</html>
